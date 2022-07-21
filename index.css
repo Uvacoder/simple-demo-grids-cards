@@ -1,0 +1,216 @@
+/* Variables */
+:root {
+  /* Colors */
+  --color-moderate-violet: 263 55% 52%;
+  --color-dark-grayish-blue: 217 19% 35%;
+  --color-dark-blackish-blue: 219 29% 14%;
+  --color-white: 0 0% 100%;
+  --color-light-grayish-blue: 210 46% 95%;
+
+  /* Font family */
+  --ff-sans: "Barlow Semi Condensed", sans-serif;
+
+  /* Font size */
+  --fs-11: 0.6875rem;
+  --fs-13: 0.8125rem;
+  --fs-20: 1.25rem;
+  --fs-24: 1.5rem;
+
+  /* Font weight */
+  --fw-500: 500;
+  --fw-600: 600;
+
+  /* Line height */
+  --leading-none: 1;
+  --leading-18: 1.125rem;
+  --leading-24: 1.5rem;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Body */
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(var(--color-light-grayish-blue));
+  font-family: var(--ff-sans);
+}
+
+/* Grid */
+.testimonial-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four"
+    "five";
+  max-width: 1110px;
+  margin: 4.375rem 1.5rem;
+}
+
+/* Card */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+  padding: 1.625rem 2rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 2.5rem 3.75rem 3.125rem -3.125rem hsl(var(
+          --color-dark-grayish-blue
+        ) / 0.25);
+}
+
+.bg-moderate-violet {
+  background-color: hsl(var(--color-moderate-violet));
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+  color: hsl(var(--color-white));
+}
+
+.bg-dark-grayish-blue {
+  background-color: hsl(var(--color-dark-grayish-blue));
+  color: hsl(var(--color-white));
+}
+
+.bg-white {
+  background-color: hsl(var(--color-white));
+  color: hsl(var(--color-dark-grayish-blue));
+}
+
+.bg-dark-blackish-blue {
+  background-color: hsl(var(--color-dark-blackish-blue));
+  color: hsl(var(--color-light-grayish-blue));
+}
+
+.card:nth-child(1) {
+  grid-area: one;
+}
+.card:nth-child(2) {
+  grid-area: two;
+}
+.card:nth-child(3) {
+  grid-area: three;
+}
+.card:nth-child(4) {
+  grid-area: four;
+}
+.card:nth-child(5) {
+  grid-area: five;
+}
+
+/* User */
+.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Avatar */
+.avatar {
+  width: 1.75rem;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* Name */
+.name {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: var(--fs-13);
+  font-weight: var(--fw-500);
+  line-height: var(--leading-none);
+}
+
+.name::after {
+  content: "Verified Graduate";
+  font-size: var(--fs-11);
+  font-weight: var(--fw-500);
+  line-height: var(--leading-none);
+  opacity: 50%;
+}
+
+/* Content card */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Paragraph 1 */
+.paragraph-1 {
+  font-size: var(--fs-20);
+  font-weight: var(--fw-600);
+  line-height: var(--leading-24);
+}
+
+/* Paragraph 2 */
+.paragraph-2 {
+  font-size: var(--fs-13);
+  font-weight: var(--fw-500);
+  line-height: var(--leading-18);
+  opacity: 70%;
+}
+
+.paragraph-2::before {
+  content: open-quote;
+}
+
+.paragraph-2::after {
+  content: close-quote;
+}
+
+/* Breakpoints */
+@media screen and (min-width: 32rem) {
+  .testimonial-grid {
+    grid-template-areas:
+      "one one"
+      "two three"
+      "five five"
+      "four four";
+  }
+}
+
+@media screen and (min-width: 36rem) {
+  .testimonial-grid {
+    grid-template-areas:
+      "one one"
+      "two five"
+      "three five"
+      "four four";
+  }
+}
+
+@media screen and (min-width: 56rem) {
+  .testimonial-grid {
+    grid-template-areas:
+      "one one two"
+      "five five five"
+      "three four four";
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  .testimonial-grid {
+    grid-template-areas:
+      "one one two five"
+      "three four four five";
+  }
+}

@@ -222,6 +222,10 @@ body {
       "three four four five";
   }
 
+  .bg-moderate-violet {
+    background-position: top right 5rem;
+  }
+
   .bg-white.card,
   .bg-dark-blackish-blue.card {
     padding: 1.625rem 2rem;

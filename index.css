@@ -71,9 +71,7 @@ body {
   gap: 1.125rem;
   padding: 1.625rem 2rem 2rem 2rem;
   border-radius: 0.5rem;
-  box-shadow: 2.5rem 3.75rem 3.125rem -3.125rem hsl(var(
-          --color-dark-grayish-blue
-        ) / 0.25);
+  box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.247378);
 }
 
 .bg-moderate-violet {

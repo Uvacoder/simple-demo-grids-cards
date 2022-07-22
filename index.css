@@ -1,11 +1,11 @@
 /* Variables */
 :root {
   /* Colors */
-  --color-moderate-violet: 263 55% 52%;
-  --color-dark-grayish-blue: 217 19% 35%;
-  --color-dark-blackish-blue: 219 29% 14%;
-  --color-white: 0 0% 100%;
-  --color-light-grayish-blue: 210 46% 95%;
+  --color-moderate-violet: 263, 55%, 52%;
+  --color-dark-grayish-blue: 217, 19%, 35%;
+  --color-dark-blackish-blue: 219, 29%, 14%;
+  --color-white: 0, 0%, 100%;
+  --color-light-grayish-blue: 210, 46%, 95%;
 
   /* Font family */
   --ff-sans: "Barlow Semi Condensed", sans-serif;
@@ -69,7 +69,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.125rem;
-  padding: 1.625rem 2rem 2rem;
+  padding: 1.625rem 2rem 2rem 2rem;
   border-radius: 0.5rem;
   box-shadow: 2.5rem 3.75rem 3.125rem -3.125rem hsl(var(
           --color-dark-grayish-blue
@@ -127,6 +127,14 @@ body {
   width: 1.75rem;
   height: auto;
   border-radius: 50%;
+}
+
+.bg-moderate-violet .avatar {
+  outline: 2px solid hsla(var(--color-white), 0.25);
+}
+
+.bg-dark-blackish-blue .avatar {
+  outline: 2px solid hsl(var(--color-moderate-violet));
 }
 
 /* Name */
@@ -212,5 +220,19 @@ body {
     grid-template-areas:
       "one one two five"
       "three four four five";
+  }
+
+  .bg-white.card,
+  .bg-dark-blackish-blue.card {
+    padding: 1.625rem 2rem;
+  }
+
+  .bg-white.content,
+  .bg-dark-blackish-blue.content {
+    gap: 1.5rem;
+  }
+
+  .bg-white .paragraph-1 {
+    max-width: 11.9375rem;
   }
 }
